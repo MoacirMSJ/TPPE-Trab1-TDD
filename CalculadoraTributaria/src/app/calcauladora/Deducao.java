@@ -31,8 +31,8 @@ public class Deducao {
 
     public Dictionary getDependenteInfo() {
         Dictionary dependenteInfo = new Hashtable();
-        dependenteInfo.put("nome", "João Pedro");
-        dependenteInfo.put("dataNascimento", "01/01/2005");
+        dependenteInfo.put("nome", nomeDependente);
+        dependenteInfo.put("dataNascimento", dataNascimentoDependente);
         return dependenteInfo;
     }
 }
