@@ -22,4 +22,19 @@ public class DeducaoTest {
         assertEquals( deducao.getValor(), 480.20f);
         assertEquals( deducao.getDescricao(), "Funpresp");
     }
+
+    @Test
+    public void testTriangulacaoCadastratarDeducao () {
+        Deducao deducaoFunpresp = new Deducao("Funpresp", 480.20f);
+        assertEquals( deducaoFunpresp.getValor(), 480.20f);
+        assertEquals( deducaoFunpresp.getDescricao(), "Funpresp");
+
+        Deducao deducaoAluguel = new Deducao("Aluguel", 1940.10f);
+        assertEquals( deducaoAluguel.getValor(), 1940.10f);
+        assertEquals( deducaoAluguel.getDescricao(), "Aluguel");
+
+        Deducao deducaoSalario = new Deducao("Salario", 10831f);
+        assertEquals( deducaoSalario.getValor(), 10831f);
+        assertEquals( deducaoSalario.getDescricao(), "Salario");
+    }
 }
