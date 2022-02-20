@@ -10,10 +10,10 @@ public class Deducao {
     }
 
     public Float getValor() {
-        return 10000f;
+        return this.valor;
     }
 
     public String getDescricao() {
-        return "Salario";
+        return this.descricao;
     }
 }
