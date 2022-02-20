@@ -62,4 +62,15 @@ public class DeducaoTest {
         assertEquals( dependente.getValor(), 189.59f);
         assertEquals( dependente.getDescricao(), "Dependente");
     }
+
+    @Test
+    public void testTriangulacaoCadastroDeducaoDependente() {
+        Deducao dependente = new Deducao("Cirilo da Silva",  "28/11/2010");
+        Dictionary dependenteInfo = new Hashtable();
+        dependenteInfo.put("nome", "Cirilo da Silva");
+        dependenteInfo.put("dataNascimento", "28/11/2010");
+        assertEquals( dependente.getDependenteInfo(), dependenteInfo);
+        assertEquals( dependente.getValor(), 189.59f);
+        assertEquals( dependente.getDescricao(), "Dependente");
+    }
 }
