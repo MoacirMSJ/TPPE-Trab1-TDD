@@ -51,4 +51,15 @@ public class DeducaoTest {
         assertEquals( dependente.getValor(), 189.59f);
         assertEquals( dependente.getDescricao(), "Dependente");
     }
+
+    @Test
+    public void testDuplicacaoCadastroDeducaoDependente() {
+        Deducao dependente = new Deducao("Maria Joaquina",  "05/05/2010");
+        Dictionary dependenteInfo = new Hashtable();
+        dependenteInfo.put("nome", "Maria Joaquina");
+        dependenteInfo.put("dataNascimento", "05/05/2010");
+        assertEquals( dependente.getDependenteInfo(), dependenteInfo);
+        assertEquals( dependente.getValor(), 189.59f);
+        assertEquals( dependente.getDescricao(), "Dependente");
+    }
 }
