@@ -5,6 +5,9 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 
+import java.util.Dictionary;
+import java.util.Hashtable;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
@@ -36,5 +39,16 @@ public class DeducaoTest {
         Deducao deducaoSalario = new Deducao("Salario", 10831f);
         assertEquals( deducaoSalario.getValor(), 10831f);
         assertEquals( deducaoSalario.getDescricao(), "Salario");
+    }
+
+    @Test
+    public void testCadastroDeducaoDependente() {
+        Deducao dependente = new Deducao("João Pedro",  "01/01/2005");
+        Dictionary dependenteInfo = new Hashtable();
+        dependenteInfo.put("nome", "João Pedro");
+        dependenteInfo.put("dataNascimento", "01/01/2005");
+        assertEquals( dependente.getDependenteInfo(), dependenteInfo);
+        assertEquals( dependente.getValor(), 189.59f);
+        assertEquals( dependente.getDescricao(), "Dependente");
     }
 }
