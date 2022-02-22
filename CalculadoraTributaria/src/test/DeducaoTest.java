@@ -81,6 +81,7 @@ public class DeducaoTest {
     public void testCadastroDeducaoValorZero () {
         assertThrows(ValorDeducaoInvalidoException.class, ()-> new Deducao("Funpresp", 0f), "Valor deve ser maior do que zero");
     }
+    
     @Test()
     public void testCadastroDeducaoDescricaoEmBranco () {
         assertThrows(DescricaoEmBrancoException.class, ()-> new Deducao("", 172f), "Descrição não informada");

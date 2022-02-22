@@ -1,5 +1,6 @@
 package app.calcauladora;
 
+import app.tratamentos.DescricaoEmBrancoException;
 import app.tratamentos.ValorDeducaoInvalidoException;
 
 import java.util.Dictionary;
@@ -14,6 +15,10 @@ public class Deducao {
     public Deducao(String descricao, Float valor) {
         if (valor <= 0){
             throw new ValorDeducaoInvalidoException("Valor deve ser maior do que zero");
+        }
+
+        if (descricao.isEmpty()){
+            throw new DescricaoEmBrancoException("Descrição não informada");
         }
 
         this.descricao = descricao;
