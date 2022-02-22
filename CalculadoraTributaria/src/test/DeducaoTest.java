@@ -75,4 +75,9 @@ public class DeducaoTest {
     public void testCadastroDeducaoValorNegativo () {
             assertThrows(ValorDeducaoInvalidoException.class, ()-> new Deducao("Funpresp", -480.20f), "Valor deve ser maior do que zero");
     }
+
+    @Test()
+    public void testCadastroDeducaoValorZero () {
+        assertThrows(ValorDeducaoInvalidoException.class, ()-> new Deducao("Funpresp", 0f), "Valor deve ser maior do que zero");
+    }
 }
