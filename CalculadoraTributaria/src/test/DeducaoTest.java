@@ -1,15 +1,12 @@
 package test;
 
 import app.calcauladora.Deducao;
-import org.junit.jupiter.api.Assertions;
+import app.tratamentos.ValorRendimentoInvalidoException;
 import org.junit.jupiter.api.Test;
-
-
 import java.util.Dictionary;
 import java.util.Hashtable;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class DeducaoTest {
     @Test
@@ -72,5 +69,10 @@ public class DeducaoTest {
         assertEquals( dependente.getDependenteInfo(), dependenteInfo);
         assertEquals( dependente.getValor(), 189.59f);
         assertEquals( dependente.getDescricao(), "Dependente");
+    }
+
+    @Test()
+    public void testCadastroDeducaoValorNegativo () {
+            assertThrows(ValorRendimentoInvalidoException.class, ()-> new Deducao("Funpresp", 480.20f), "Valor deve ser maior do que zero");
     }
 }
