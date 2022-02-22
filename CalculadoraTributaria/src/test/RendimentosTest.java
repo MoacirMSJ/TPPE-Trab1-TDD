@@ -1,6 +1,7 @@
 package test;
 
 import app.cadastroRendimentos.CadastroRendimentos;
+import app.tratamentos.DescricaoNaoInformadaException;
 import app.tratamentos.ValorNaoInformadoException;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -20,4 +21,9 @@ public class RendimentosTest {
     public void testeCadastroRendimentoValorNegativo () {
         assertThrows(ValorNaoInformadoException.class, ()-> new CadastroRendimentos("Salario", -10f), "Valor deve ser maior do que zero");
     }
+    @Test()
+    public void testeCadastroRendimentoSemDescricao () {
+        assertThrows(DescricaoNaoInformadaException.class, ()-> new CadastroRendimentos("", 10f), "Descrição não informada");
+    }
+
 }
