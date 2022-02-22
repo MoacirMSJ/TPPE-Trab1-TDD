@@ -1,8 +1,8 @@
 package test;
 
 import app.cadastroRendimentos.CadastroRendimentos;
-import app.tratamentos.DescricaoNaoInformadaException;
-import app.tratamentos.ValorNaoInformadoException;
+import app.tratamentos.DescricaoEmBrancoException;
+import app.tratamentos.ValorRendimentoInvalidoException;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -19,11 +19,11 @@ public class RendimentosTest {
     }
     @Test()
     public void testeCadastroRendimentoValorNegativo () {
-        assertThrows(ValorNaoInformadoException.class, ()-> new CadastroRendimentos("Salario", -10f), "Valor deve ser maior do que zero");
+        assertThrows(ValorRendimentoInvalidoException.class, ()-> new CadastroRendimentos("Salario", -10f), "Valor deve ser maior do que zero");
     }
     @Test()
     public void testeCadastroRendimentoSemDescricao () {
-        assertThrows(DescricaoNaoInformadaException.class, ()-> new CadastroRendimentos("", 10f), "Descrição não informada");
+        assertThrows(DescricaoEmBrancoException.class, ()-> new CadastroRendimentos("", 10f), "Descrição não informada");
     }
 
 }

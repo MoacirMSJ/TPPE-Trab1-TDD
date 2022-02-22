@@ -1,7 +1,7 @@
 package app.cadastroRendimentos;
 
-import app.tratamentos.DescricaoNaoInformadaException;
-import app.tratamentos.ValorNaoInformadoException;
+import app.tratamentos.DescricaoEmBrancoException;
+import app.tratamentos.ValorRendimentoInvalidoException;
 
 public class CadastroRendimentos {
     private String descricao;
@@ -10,10 +10,10 @@ public class CadastroRendimentos {
     public CadastroRendimentos(String descricao, Float valor) {
 
         if (descricao.equals("")){
-            throw new DescricaoNaoInformadaException("Descrição não informada");
+            throw new DescricaoEmBrancoException("Descrição não informada");
         }
         if (valor < 0){
-            throw new ValorNaoInformadoException("Valor deve ser maior do que zero");
+            throw new ValorRendimentoInvalidoException("Valor deve ser maior do que zero");
         }
         this.descricao = descricao;
         this.valor = valor;
