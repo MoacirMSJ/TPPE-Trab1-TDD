@@ -1,7 +1,7 @@
 package test;
 
 import app.calcauladora.Deducao;
-import app.tratamentos.ValorRendimentoInvalidoException;
+import app.tratamentos.ValorDeducaoInvalidoException;
 import org.junit.jupiter.api.Test;
 import java.util.Dictionary;
 import java.util.Hashtable;
@@ -73,6 +73,6 @@ public class DeducaoTest {
 
     @Test()
     public void testCadastroDeducaoValorNegativo () {
-            assertThrows(ValorRendimentoInvalidoException.class, ()-> new Deducao("Funpresp", 480.20f), "Valor deve ser maior do que zero");
+            assertThrows(ValorDeducaoInvalidoException.class, ()-> new Deducao("Funpresp", -480.20f), "Valor deve ser maior do que zero");
     }
 }

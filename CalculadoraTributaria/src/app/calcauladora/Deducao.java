@@ -1,5 +1,7 @@
 package app.calcauladora;
 
+import app.tratamentos.ValorDeducaoInvalidoException;
+
 import java.util.Dictionary;
 import java.util.Hashtable;
 
@@ -10,6 +12,10 @@ public class Deducao {
     private String dataNascimentoDependente = "";
 
     public Deducao(String descricao, Float valor) {
+        if (valor < 0){
+            throw new ValorDeducaoInvalidoException("Valor deve ser maior do que zero");
+        }
+
         this.descricao = descricao;
         this.valor = valor;
     }
