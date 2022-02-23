@@ -13,17 +13,23 @@ public class RendimentosTest {
 
     @Test()
     public void testeCadastroRendimentoComValor () {
-        CadastroRendimentos rendimento = new CadastroRendimentos("Salario", 3500f);
+        CadastroRendimentos rendimento = new CadastroRendimentos("Salario", 3500.0);
         assertEquals(rendimento.getDescricao(), "Salario" );
         assertEquals(rendimento.getValor(), 3500f );
     }
     @Test()
     public void testeCadastroRendimentoValorNegativo () {
-        assertThrows(ValorRendimentoInvalidoException.class, ()-> new CadastroRendimentos("Salario", -10f), "Valor deve ser maior do que zero");
+        assertThrows(ValorRendimentoInvalidoException.class, ()-> new CadastroRendimentos("Salario", -1.0), "Valor deve ser maior do que zero");
     }
+
+    @Test()
+    public void testeCadastroRendimentoValorZero () {
+        assertThrows(ValorRendimentoInvalidoException.class, ()-> new CadastroRendimentos("Salario", 0.0), "Valor deve ser maior do que zero");
+    }
+
     @Test()
     public void testeCadastroRendimentoSemDescricao () {
-        assertThrows(DescricaoEmBrancoException.class, ()-> new CadastroRendimentos("", 10f), "Descrição não informada");
-    }
+        assertThrows(DescricaoEmBrancoException.class, ()-> new CadastroRendimentos("", 10.0), "Descrição não informada");
+    } 
 
 }
