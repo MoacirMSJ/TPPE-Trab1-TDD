@@ -1,6 +1,6 @@
 package test;
 
-import app.calcauladora.Deducao;
+import app.calculadora.Deducao;
 import app.tratamentos.DescricaoEmBrancoException;
 import app.tratamentos.ValorDeducaoInvalidoException;
 import org.junit.jupiter.api.Test;

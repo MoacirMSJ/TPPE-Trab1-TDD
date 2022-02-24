@@ -1,4 +1,4 @@
-package app.calcauladora;
+package app.calculadora;
 
 public class CalculadoraTributaria {
     public static void main(String[] args) {
