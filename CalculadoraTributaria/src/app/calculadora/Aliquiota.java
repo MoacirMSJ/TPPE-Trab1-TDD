@@ -10,7 +10,7 @@ public class Aliquiota {
 	}
 
 	public float getValorEfetivo() {
-		return valorEfetivo = 69.20f;
+		return valorEfetivo;
 	}
 	
 }
