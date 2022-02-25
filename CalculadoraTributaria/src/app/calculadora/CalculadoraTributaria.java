@@ -8,7 +8,9 @@ public class CalculadoraTributaria {
     private final List<Rendimentos> rendimentos;
 
     private float totalRendimento;
-    ArrayList<Deducao> deducoes;
+    private ArrayList<Deducao> deducoes;
+    private float totalDeducao = 0f;
+
     public CalculadoraTributaria() {
         rendimentos = new ArrayList<Rendimentos>();
     }
@@ -28,6 +30,9 @@ public class CalculadoraTributaria {
     }
 
     public float getValorDeducoes() {
-        return 10000f;
+        for(Deducao deducao: deducoes){
+            this.totalDeducao +=deducao.getValor();
+        }
+        return this.totalDeducao;
     }
 }
