@@ -22,4 +22,14 @@ public class DeducoesCalculadoraTriburtariaTest {
         assertEquals(calculadora.getValorDeducoes(), 10000f);
     }
 
+    @Test
+    public void testCadastrarDeducoesDuplicacao () {
+        CalculadoraTributaria calculadora = new CalculadoraTributaria();
+        ArrayList<Deducao> deducoes = new ArrayList<Deducao>();
+        deducoes.add(new Deducao("Previdencia Privada", 10000f));
+        deducoes.add(new Deducao("Cirilo de Jesus", "01/01/2005"));
+        calculadora.cadastrarDeducoes(deducoes);
+        assertEquals(calculadora.getValorDeducoes(), 10000f+189.59f);
+    }
+
 }
