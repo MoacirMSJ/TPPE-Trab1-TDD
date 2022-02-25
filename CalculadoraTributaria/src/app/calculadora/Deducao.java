@@ -1,4 +1,4 @@
-package app.calcauladora;
+package app.calculadora;
 
 import app.tratamentos.DescricaoEmBrancoException;
 import app.tratamentos.ValorDeducaoInvalidoException;

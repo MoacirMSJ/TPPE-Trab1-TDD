@@ -1,6 +1,6 @@
 package test;
 
-import app.calcauladora.CalculadoraTributaria;
+import app.calculadora.CalculadoraTributaria;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

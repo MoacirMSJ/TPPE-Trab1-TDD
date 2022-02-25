@@ -1,4 +1,4 @@
-package app.calcauladora;
+package app.calculadora;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 public class CalculadoraTributaria {
 
     private final List<Rendimentos> rendimentos;
-    
+
     private float totalRendimento;
 
     public CalculadoraTributaria() {
