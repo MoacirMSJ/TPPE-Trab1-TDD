@@ -1,6 +1,6 @@
 package test;
 
-import app.calcauladora.Rendimentos;
+import app.calculadora.Rendimentos;
 import app.tratamentos.DescricaoEmBrancoException;
 import app.tratamentos.ValorRendimentoInvalidoException;
 import org.junit.jupiter.api.Test;
