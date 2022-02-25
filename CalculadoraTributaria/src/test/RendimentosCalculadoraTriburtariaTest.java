@@ -13,14 +13,14 @@ import java.util.Collection;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class CalculadoraTriburtariaTest {
+public class RendimentosCalculadoraTriburtariaTest {
 
     CalculadoraTributaria simul;
 
     Object[][] rendimentos;
     float valorEsperado;
 
-    public CalculadoraTriburtariaTest(Object[][] rendimentos, float valorEsperado) {
+    public RendimentosCalculadoraTriburtariaTest(Object[][] rendimentos, float valorEsperado) {
         this.rendimentos = rendimentos;
         this.valorEsperado = valorEsperado;
     }
