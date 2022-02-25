@@ -12,8 +12,7 @@ public class CalculadoraTriburtariaTest {
     public void testCadastroUmRendimento () {
         CalculadoraTributaria calc = new CalculadoraTributaria();
         calc.CadastrarRendimentos("salario", 10000f);
-        assertEquals( calc.getTotalRendimentos(), 10000f);
-
+        assertEquals( calc.getTotalRendimento(), 10000f);
     }
 
     @Test
@@ -21,6 +20,6 @@ public class CalculadoraTriburtariaTest {
         CalculadoraTributaria calc = new CalculadoraTributaria();
         calc.CadastrarRendimentos("salario", 10000f);
         calc.CadastrarRendimentos("aluguel", 2000f);
-        assertEquals( calc.getTotalRendimentos(), 12000f);
+        assertEquals( calc.getTotalRendimento(), 12000f);
     }
 }
