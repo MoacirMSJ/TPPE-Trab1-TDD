@@ -5,14 +5,15 @@ import java.util.List;
 
 public class CalculadoraTributaria {
 
+    private final List<Rendimentos> rendimentos;
+    
     private float totalRendimento;
-    private List<Rendimentos> rendimentos;
 
     public CalculadoraTributaria() {
         rendimentos = new ArrayList<Rendimentos>();
     }
 
-    public void CadastrarRendimentos (String descricao, float valor){
+    public void CadastrarRendimentos(String descricao, float valor) {
         Rendimentos rend = new Rendimentos(descricao, valor);
         this.rendimentos.add(rend);
         this.totalRendimento += valor;
