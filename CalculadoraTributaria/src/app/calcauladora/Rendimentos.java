@@ -1,13 +1,13 @@
-package app.cadastroRendimentos;
+package app.calcauladora;
 
 import app.tratamentos.DescricaoEmBrancoException;
 import app.tratamentos.ValorRendimentoInvalidoException;
 
-public class CadastroRendimentos {
+public class Rendimentos {
     private String descricao;
     private Float valor;
 
-    public CadastroRendimentos(String descricao, Float valor) {
+    public Rendimentos(String descricao, Float valor) {
 
         if (descricao.equals("")){
             throw new DescricaoEmBrancoException("Descrição não informada");

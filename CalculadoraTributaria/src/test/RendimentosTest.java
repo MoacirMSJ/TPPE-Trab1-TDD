@@ -1,6 +1,6 @@
 package test;
 
-import app.cadastroRendimentos.CadastroRendimentos;
+import app.calcauladora.Rendimentos;
 import app.tratamentos.DescricaoEmBrancoException;
 import app.tratamentos.ValorRendimentoInvalidoException;
 import org.junit.jupiter.api.Test;
@@ -13,17 +13,17 @@ public class RendimentosTest {
 
     @Test()
     public void testeCadastroRendimentoComValor () {
-        CadastroRendimentos rendimento = new CadastroRendimentos("Salario", 3500f);
+        Rendimentos rendimento = new Rendimentos("Salario", 3500f);
         assertEquals(rendimento.getDescricao(), "Salario" );
         assertEquals(rendimento.getValor(), 3500f );
     }
     @Test()
     public void testeCadastroRendimentoValorNegativo () {
-        assertThrows(ValorRendimentoInvalidoException.class, ()-> new CadastroRendimentos("Salario", -10f), "Valor deve ser maior do que zero");
+        assertThrows(ValorRendimentoInvalidoException.class, ()-> new Rendimentos("Salario", -10f), "Valor deve ser maior do que zero");
     }
     @Test()
     public void testeCadastroRendimentoSemDescricao () {
-        assertThrows(DescricaoEmBrancoException.class, ()-> new CadastroRendimentos("", 10f), "Descrição não informada");
+        assertThrows(DescricaoEmBrancoException.class, ()-> new Rendimentos("", 10f), "Descrição não informada");
     }
 
 }
