@@ -12,10 +12,14 @@ public class Deducao {
     private String nomeDependente = "";
     private String dataNascimentoDependente = "";
 
-    public Deducao(String descricao, Float valor) {
-        this.validarDeducao(descricao,valor);
+    private setInformacoesPadroesDeducao(String descricao, Float valor){
         this.descricao = descricao;
         this.valor = valor;
+    }
+
+    public Deducao(String descricao, Float valor) {
+        this.validarDeducao(descricao,valor);
+        this.setValoresPadroesDeducao(descricao,valor);
     }
 
     private void validarDeducao(String descricao, Float valor) {
@@ -28,10 +32,9 @@ public class Deducao {
     }
 
     public Deducao(String nomeDependente, String dataNascimento) {
-        this.descricao = "Dependente";
         this.nomeDependente = nomeDependente;
         this.dataNascimentoDependente = dataNascimento;
-        this.valor = 189.59f;
+        this.setValoresPadroesDeducao("Dependente",189.59f);
     }
 
     public Float getValor() {
