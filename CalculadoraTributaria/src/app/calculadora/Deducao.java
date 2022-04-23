@@ -12,7 +12,7 @@ public class Deducao {
     private String nomeDependente = "";
     private String dataNascimentoDependente = "";
 
-    private setInformacoesPadroesDeducao(String descricao, Float valor){
+    private void setInformacoesPadroesDeducao(String descricao, Float valor){
         this.descricao = descricao;
         this.valor = valor;
     }
@@ -31,10 +31,14 @@ public class Deducao {
         }
     }
 
-    public Deducao(String nomeDependente, String dataNascimento) {
+    private void adicionarDependente(String nomeDependente, String dataNascimento){
         this.nomeDependente = nomeDependente;
         this.dataNascimentoDependente = dataNascimento;
         this.setValoresPadroesDeducao("Dependente",189.59f);
+    }
+
+    public Deducao(String nomeDependente, String dataNascimento) {
+        this.adicionarDependente(nomeDependente,dataNascimento); 
     }
 
     public Float getValor() {
