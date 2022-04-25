@@ -19,7 +19,7 @@ public class Deducao {
 
     public Deducao(String descricao, Float valor) {
         this.validarDeducao(descricao,valor);
-        this.setValoresPadroesDeducao(descricao,valor);
+        this.setInformacoesPadroesDeducao(descricao,valor);
     }
 
     private void validarDeducao(String descricao, Float valor) {
@@ -34,7 +34,7 @@ public class Deducao {
     private void adicionarDependente(String nomeDependente, String dataNascimento){
         this.nomeDependente = nomeDependente;
         this.dataNascimentoDependente = dataNascimento;
-        this.setValoresPadroesDeducao("Dependente",189.59f);
+        this.setInformacoesPadroesDeducao("Dependente",189.59f);
     }
 
     public Deducao(String nomeDependente, String dataNascimento) {

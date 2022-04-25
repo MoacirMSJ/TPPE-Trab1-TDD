@@ -4,8 +4,10 @@ import app.calculadora.Deducao;
 import app.tratamentos.DescricaoEmBrancoException;
 import app.tratamentos.ValorDeducaoInvalidoException;
 import org.junit.jupiter.api.Test;
+
 import java.util.Dictionary;
 import java.util.Hashtable;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
